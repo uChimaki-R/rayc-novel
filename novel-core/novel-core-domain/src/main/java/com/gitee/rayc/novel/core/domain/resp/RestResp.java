@@ -34,9 +34,9 @@ public class RestResp<T> {
         this.message = RespCodeEnum.OK.getMessage();
     }
 
-    private RestResp(RespCodeEnum errorCode) {
-        this.code = errorCode.getCode();
-        this.message = errorCode.getMessage();
+    private RestResp(RespCodeEnum respCodeEnum) {
+        this.code = respCodeEnum.getCode();
+        this.message = respCodeEnum.getMessage();
     }
 
     private RestResp(T data) {
@@ -61,8 +61,8 @@ public class RestResp<T> {
     /**
      * 业务处理失败
      */
-    public static RestResp<Void> fail(RespCodeEnum errorCode) {
-        return new RestResp<>(errorCode);
+    public static RestResp<Void> fail(RespCodeEnum respCodeEnum) {
+        return new RestResp<>(respCodeEnum);
     }
 
     /**
