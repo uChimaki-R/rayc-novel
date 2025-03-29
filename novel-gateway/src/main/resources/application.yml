@@ -1,0 +1,44 @@
+server:
+  port: 8888
+spring:
+  profiles:
+    active: dev
+  cloud:
+    zookeeper:
+      connect-string: 192.168.202.135:2181
+      discovery:
+        root: /rayc-novel/services
+    gateway:
+      routes:
+        - id: novel-home-front
+          uri: lb://novel-home-service
+          predicates:
+            - Path=/api/front/home/**
+        - id: novel-news-front
+          uri: lb://novel-news-service
+          predicates:
+            - Path=/api/front/news/**
+        - id: novel-resource-front
+          uri: lb://novel-resource-service
+          predicates:
+            - Path=/api/front/resource/**
+        - id: novel-resource-image
+          uri: lb://novel-resource-service
+          predicates:
+            - Path=/image/**
+        - id: novel-user-front
+          uri: lb://novel-user-service
+          predicates:
+            - Path=/api/front/user/**
+        - id: novel-book-front
+          uri: lb://novel-book-service
+          predicates:
+            - Path=/api/front/book/**
+        - id: novel-search-front
+          uri: lb://novel-search-service
+          predicates:
+            - Path=/api/front/search/**
+        - id: novel-author
+          uri: lb://novel-author-service
+          predicates:
+            - Path=/api/author/**
