@@ -10,6 +10,14 @@
     <packaging>pom</packaging>
     <modules>
         <module>novel-core</module>
+        <module>novel-news</module>
+        <module>novel-user</module>
+        <module>novel-author</module>
+        <module>novel-gateway</module>
+        <module>novel-book</module>
+        <module>novel-home</module>
+        <module>novel-search</module>
+        <module>novel-resource</module>
     </modules>
 
     <parent>
@@ -24,12 +32,12 @@
         <maven.compiler.target>8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
-        <spring-cloud.version>2021.0.3</spring-cloud.version>
-        <spring-cloud-alibaba.version>2021.0.4.0</spring-cloud-alibaba.version>
+        <spring-cloud.version>2021.0.5</spring-cloud.version>
+        <spring-cloud-alibaba.version>2021.0.5.0</spring-cloud-alibaba.version>
 
         <mysql.version>8.0.23</mysql.version>
         <mybatis-plus.version>3.5.3.1</mybatis-plus.version>
-        <elasticsearch.version>7.12.1</elasticsearch.version>
+        <elasticsearch.version>8.13.4</elasticsearch.version>
         <caffeine.version>2.9.3</caffeine.version>
         <redisson.version>3.19.1</redisson.version>
         <shardingsphere-jdbc.version>5.2.1</shardingsphere-jdbc.version>
@@ -75,8 +83,8 @@
             </dependency>
             <!--es-->
             <dependency>
-                <groupId>org.elasticsearch.client</groupId>
-                <artifactId>elasticsearch-rest-high-level-client</artifactId>
+                <groupId>co.elastic.clients</groupId>
+                <artifactId>elasticsearch-java</artifactId>
                 <version>${elasticsearch.version}</version>
             </dependency>
             <!--caffeine-->
