@@ -1,0 +1,12 @@
+novel:
+  # XSS 过滤配置
+  xss:
+    # 过滤开关
+    enabled: true
+    # 排除链接
+    excludes:
+      - /system/notice/*
+  # JWT 配置
+  jwt:
+    secret: /SL4QzwhI3hRBMy6AIa5ususQBcecxUC0qyTHoHDr80=
+    system-key-header: systemKeyHeader
