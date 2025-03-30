@@ -1,5 +1,6 @@
-package com.gitee.rayc.novel.core.domain.constant;
+package com.gitee.rayc.novel.core.data.constant;
 
+import com.gitee.rayc.novel.core.domain.constant.CommonConsts;
 import lombok.Getter;
 
 /**
@@ -169,7 +170,7 @@ public class DatabaseConsts {
         CREATE_TIME("create_time"),
         UPDATE_TIME("update_time");
 
-        private String name;
+        private final String name;
 
         CommonColumnEnum(String name) {
             this.name = name;
@@ -190,7 +191,7 @@ public class DatabaseConsts {
         LIMIT_30("limit 30"),
         LIMIT_500("limit 500");
 
-        private String sql;
+        private final String sql;
 
         SqlEnum(String sql) {
             this.sql = sql;

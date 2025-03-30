@@ -1,4 +1,4 @@
-package com.gitee.rayc.novel.core.domain.constant;
+package com.gitee.rayc.novel.core.data.constant;
 
 import lombok.Getter;
 
