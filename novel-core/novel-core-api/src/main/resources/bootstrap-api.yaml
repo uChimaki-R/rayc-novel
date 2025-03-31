@@ -1,0 +1,13 @@
+spring:
+  cloud:
+    zookeeper:
+      connect-string: centos135:2181
+      config:
+        root: /rayc-novel/services
+dubbo:
+  application:
+    name: ${spring.application.name}
+  registry:
+    address: zookeeper://centos135:2181
+  consumer:
+    check: false # 启动时不要检查提供者是否存在，开启的话，如果提供者不存在消费者也启动不了
