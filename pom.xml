@@ -37,7 +37,7 @@
 
         <mysql.version>8.0.23</mysql.version>
         <mybatis-plus.version>3.5.3.1</mybatis-plus.version>
-        <elasticsearch.version>8.13.4</elasticsearch.version>
+        <elasticsearch.version>7.12.1</elasticsearch.version>
         <caffeine.version>2.9.3</caffeine.version>
         <redisson.version>3.19.1</redisson.version>
         <shardingsphere-jdbc.version>5.2.1</shardingsphere-jdbc.version>
@@ -83,8 +83,8 @@
             </dependency>
             <!--es-->
             <dependency>
-                <groupId>co.elastic.clients</groupId>
-                <artifactId>elasticsearch-java</artifactId>
+                <groupId>org.elasticsearch.client</groupId>
+                <artifactId>elasticsearch-rest-high-level-client</artifactId>
                 <version>${elasticsearch.version}</version>
             </dependency>
             <!--caffeine-->
