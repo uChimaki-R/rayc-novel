@@ -3,6 +3,6 @@ spring:
     name: novel-gateway
   cloud:
     zookeeper:
-      connect-string: 192.168.202.135:2181
-      config:
-        root: /rayc-novel/config
+      connect-string: centos135:2181
+      discovery:
+        root: /rayc-novel/service
