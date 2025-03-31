@@ -4,10 +4,6 @@ spring:
   profiles:
     active: dev
   cloud:
-    zookeeper:
-      connect-string: 192.168.202.135:2181
-      discovery:
-        root: /rayc-novel/services
     gateway:
       routes:
         - id: novel-home-front
