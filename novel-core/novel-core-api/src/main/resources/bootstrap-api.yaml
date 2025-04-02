@@ -1,9 +1,3 @@
-spring:
-  cloud:
-    zookeeper:
-      connect-string: centos135:2181
-      config:
-        root: /rayc-novel/services
 dubbo:
   application:
     name: ${spring.application.name}
