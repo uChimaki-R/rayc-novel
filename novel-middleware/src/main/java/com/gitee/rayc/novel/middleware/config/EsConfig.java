@@ -1,6 +1,6 @@
-package com.gitee.rayc.novel.search.config;
+package com.gitee.rayc.novel.middleware.config;
 
-import com.gitee.rayc.novel.search.properties.EsProperties;
+import com.gitee.rayc.novel.middleware.properties.EsProperties;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.http.HttpHost;
 import org.elasticsearch.client.RestClient;

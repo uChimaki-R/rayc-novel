@@ -1,4 +1,4 @@
-package com.gitee.rayc.novel.search.config;
+package com.gitee.rayc.novel.middleware.config;
 
 import com.xxl.job.core.executor.impl.XxlJobSpringExecutor;
 import lombok.extern.slf4j.Slf4j;
