@@ -29,11 +29,5 @@
             <artifactId>novel-core-data</artifactId>
             <version>${parent.version}</version>
         </dependency>
-
-        <!--xxl-job-->
-        <dependency>
-            <groupId>com.xuxueli</groupId>
-            <artifactId>xxl-job-core</artifactId>
-        </dependency>
     </dependencies>
 </project>
