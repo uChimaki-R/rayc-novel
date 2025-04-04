@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: novel-search-service
+  profiles:
+    include: api
+  cloud:
+    zookeeper:
+      connect-string: centos135:2181
+      discovery:
+        root: /rayc-novel/service
