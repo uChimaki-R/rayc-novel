@@ -1,8 +1,8 @@
 package com.gitee.rayc.novel.book.utils;
 
 import com.alibaba.fastjson.JSON;
+import com.gitee.rayc.novel.book.entity.BookInfo;
 import com.gitee.rayc.novel.book.properties.RocketProperties;
-import com.gitee.rayc.novel.core.api.dto.req.book.ChapterAddReqDto;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.rocketmq.client.producer.DefaultMQProducer;
 import org.apache.rocketmq.client.producer.SendCallback;
@@ -28,9 +28,9 @@ public class RocketUtils {
     @Resource
     private DefaultMQProducer producer;
 
-    public void sendBookChangeMsg(ChapterAddReqDto dto) {
-        log.info("发送小说信息改变消息 {}", dto);
-        Message message = new Message(rocketProperties.getTopic(), rocketProperties.getTags(), JSON.toJSONString(dto).getBytes(StandardCharsets.UTF_8));
+    public void sendBookChangeMsg(BookInfo bookInfo) {
+        log.info("发送小说信息改变消息 {}", bookInfo);
+        Message message = new Message(rocketProperties.getTopic(), rocketProperties.getTags(), JSON.toJSONString(bookInfo).getBytes(StandardCharsets.UTF_8));
         try {
             producer.send(message, new SendCallback() {
                 @Override
