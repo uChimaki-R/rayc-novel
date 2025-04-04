@@ -11,6 +11,13 @@ dubbo:
     name: dubbo
     port: 20820
 
+novel:
+  rocket:
+    namesrv-addr: centos135:9876
+    producer-group: book_change_producer
+    tags: book_change
+    topic: book_change_topic
+
 management:
   # 端点启用配置
   endpoint:
