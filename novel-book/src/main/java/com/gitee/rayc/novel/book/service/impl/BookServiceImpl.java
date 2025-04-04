@@ -363,7 +363,7 @@ public class BookServiceImpl implements BookService {
         //  b) 清除小说信息缓存
         bookInfoCacheManager.evictBookInfoCache(dto.getBookId());
         //  c) 发送小说信息更新的 MQ 消息
-        rocketUtils.sendBookChangeMsg(dto);
+        rocketUtils.sendBookChangeMsg(newBookInfo);
         return RestResp.ok();
     }
 
