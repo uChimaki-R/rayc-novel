@@ -1,4 +1,4 @@
-package com.gitee.rayc.novel.search.properties;
+package com.gitee.rayc.novel.middleware.properties;
 
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
