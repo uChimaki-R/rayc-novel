@@ -1,4 +1,4 @@
-package com.gitee.rayc.novel.search.task;
+package com.gitee.rayc.novel.middleware.task;
 
 import org.apache.dubbo.config.annotation.DubboReference;
 import org.elasticsearch.action.bulk.BulkItemResponse;
