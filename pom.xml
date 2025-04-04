@@ -18,6 +18,7 @@
         <module>novel-home</module>
         <module>novel-search</module>
         <module>novel-resource</module>
+        <module>novel-middleware</module>
     </modules>
 
     <parent>
